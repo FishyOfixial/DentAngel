@@ -522,6 +522,7 @@
         float: none; /* Evita que floten y se alineen en una fila */
         width: 100%; /* Hacen que cada columna ocupe el 100% del ancho */
         padding-left: 0; /* Elimina el padding de izquierda */
+        font-size: 200%
       }
       .cono, .espetitle{
         font-size: 50px;
