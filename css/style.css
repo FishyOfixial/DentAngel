@@ -261,6 +261,11 @@
     vertical-align: middle;
     
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se muevan a la siguiente fila si no hay espacio */
+    justify-content: center; /* Centra las columnas en la fila */
+}
 
   .row:after{
     content: "";
@@ -334,7 +339,7 @@
   }
 
   .column-text-cono{
-    font-size: 25px;
+    font-size: 100%;
     color: #000;
     font-family: "bahn";
     font-weight: normal;
@@ -413,10 +418,6 @@
     .column-text-esp{
       font-size: 27.5px;
     }
-
-    .column-text-cono{
-      font-size: 23px;
-    }
     .column-box-cono1, .column-box-cono2, .column-box-cono3{
       height: 27rem;
     }
@@ -430,10 +431,6 @@
       .column-text-titlecono, .column-text-titlecont{
         font-size: 30px;
       }
-      .column-text-cono{
-        font-size: 20px;
-        padding-top: 0rem;
-      }
       .column-text-esp{
         font-size: 27.5px;
       }
@@ -446,9 +443,6 @@
       .column{
         width: 37%;
         left: 50%;
-      }
-      .column-text-cono{
-        font-size: 18px;
       }
       .cont{
         height: 900px;
@@ -508,10 +502,6 @@
       .column-text-titlecono, .column-text-titlecont{
         font-size: 25px;
       }
-      .column-text-cono{
-        font-size: 17px;
-        padding-top: 0rem;
-      }
       .column-text-esp{
         font-size: 20px;
       }
@@ -528,19 +518,16 @@
     }
 
     @media screen and (max-width:1000px){
+      .column-cono{
+        float: none; /* Evita que floten y se alineen en una fila */
+        width: 100%; /* Hacen que cada columna ocupe el 100% del ancho */
+        padding-left: 0; /* Elimina el padding de izquierda */
+      }
       .cono, .espetitle{
         font-size: 50px;
       }
-      .column-cono{
-        width: 27.5%;
-      }
       .column-text-titlecono, .column-text-titlecont{
         font-size: 25px;
-      }
-      .column-text-cono{
-        font-size: 15px;
-        padding-top: 0rem;
-        padding-right: 1rem;
       }
       .column-text-esp{
         font-size: 20px;
@@ -561,9 +548,6 @@
     }
 
     @media screen and (max-width:875px){
-      .column-text-cono{
-        font-size: 15px;
-      }
       .column-text-esp{
         font-size: 15px;
       }
@@ -606,17 +590,11 @@
       .column-text-titlecont{
         font-size: 17.5px;
       }
-      .column-text-cono{
-        font-size: 12.5px;
-      }
       .cont{
         height: 600px;
       }
       .column-box-cono1, .column-box-cono2, .column-box-cono3{
         height: 19rem;
-      }
-      .column-cono{
-        width: 25%;
       }
       .logo img{
         height: 40px;
@@ -627,9 +605,6 @@
       .column{
         width: 15%;
         padding-left: 20%;
-      }
-      .column-text-cono{
-        font-size: 10px;
       }
       .column-text-esp{
         font-size: 10px;
@@ -647,9 +622,6 @@
     }
 
     @media screen and (max-width:610px){
-      .column-text-cono{
-        font-size: 7.5px;
-      }
       .column-box-cono1, .column-box-cono2, .column-box-cono3{
         height: 15rem;
       }
